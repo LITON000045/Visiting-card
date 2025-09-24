@@ -21,7 +21,6 @@
       justify-content: center;
       align-items: center;
       color: #fff;
-      padding: 10px;
     }
 
     .card {
@@ -32,13 +31,7 @@
       backdrop-filter: blur(12px);
       box-shadow: 0 8px 30px rgba(0,0,0,0.3);
       width: 350px;
-      max-width: 100%;
       animation: fadeIn 1s ease-in-out;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
     }
 
     .card img {
@@ -79,7 +72,6 @@
       font-weight: 500;
       transition: 0.3s;
       width: 80%;
-      cursor: pointer;
     }
 
     .btn-instagram {
@@ -100,110 +92,21 @@
       opacity: 0.9;
     }
 
-    .btn-save {
-      background: #28a745;
-      color: white;
-    }
-
-    .btn-save:hover {
-      opacity: 0.9;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    /* Click-to-copy tooltip */
-    .copy-text {
-      position: relative;
-      cursor: pointer;
-      display: inline-block;
-    }
-
-    .copy-text a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .tooltip {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #333;
-      color: #fff;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 12px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s;
-    }
-
-    .tooltip.show {
-      opacity: 1;
-    }
-
   </style>
 </head>
 <body>
   <div class="card">
-    <!-- Replace the src with your direct image link -->
-    <img src="your-photo.jpg" alt="Liton Malakar">
+   <img src="https://drive.google.com/uc?export=download&id=1fpqiyKQzrFOsTwTrstHHw_tmtHscPB1u" alt="Liton Malakar">
     <h2>Liton Malakar</h2>
     <p>Graphic Designer & Video Editor</p>
     
     <div class="contact">
-      <!-- Click-to-copy email -->
-      <p class="copy-text" data-text="litonmalakar.official@gmail.com">
-        📧 litonmalakar.official@gmail.com
-        <span class="tooltip">Copied!</span>
-      </p>
-
-      <!-- Click-to-copy & call phone number -->
-      <p class="copy-text" data-text="+919674961374">
-        📱 <a href="tel:+919674961374">+91 9674961374</a>
-        <span class="tooltip">Copied!</span>
-      </p>
-    </div>
-    
-    <div class="social">
-      <a href="https://www.instagram.com/l_i_t_o_n_m_a_l_a_k_a_r" target="_blank" class="btn btn-instagram">🌸 Follow on Instagram</a>
-      <a href="https://www.linkedin.com/in/liton-malakar-1351a9225" target="_blank" class="btn btn-linkedin">🔗 Connect on LinkedIn</a>
-      <a href="liton.vcf" download class="btn btn-save">📥 Save My Contact</a>
-    </div>
-  </div>
-
-  <script>
-    const copyElements = document.querySelectorAll('.copy-text');
-
-    copyElements.forEach(el => {
-      el.addEventListener('click', (e) => {
-        if(e.target.tagName !== 'A') {
-          const text = el.getAttribute('data-text');
-          navigator.clipboard.writeText(text).then(() => {
-            const tooltip = el.querySelector('.tooltip');
-            tooltip.classList.add('show');
-            setTimeout(() => tooltip.classList.remove('show'), 1000);
-          });
-        }
-      });
-    });
-  </script>
-</body>
-</html>    <div class="contact">
-      <!-- Click-to-copy email -->
-      <p class="copy-text" data-text="litonmalakar.official@gmail.com">
-        📧 litonmalakar.official@gmail.com
-        <span class="tooltip">Copied!</span>
-      </p>
-
-      <!-- Click-to-copy & call phone number -->
-      <p class="copy-text" data-text="+919674961374">
-        📱 <a href="tel:+919674961374">+91 9674961374</a>
-        <span class="tooltip">Copied!</span>
-      </p>
+      <p>📧 litonmalakar.official@gmail.com</p>
+      <p>📱 +91 9674961374</p>
     </div>
     
     <div class="social">
@@ -211,23 +114,5 @@
       <a href="https://www.linkedin.com/in/liton-malakar-1351a9225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn btn-linkedin">🔗 Connect on LinkedIn</a>
     </div>
   </div>
-
-  <script>
-    const copyElements = document.querySelectorAll('.copy-text');
-
-    copyElements.forEach(el => {
-      el.addEventListener('click', (e) => {
-        // Only copy text if it's not a link click
-        if(e.target.tagName !== 'A') {
-          const text = el.getAttribute('data-text');
-          navigator.clipboard.writeText(text).then(() => {
-            const tooltip = el.querySelector('.tooltip');
-            tooltip.classList.add('show');
-            setTimeout(() => tooltip.classList.remove('show'), 1000);
-          });
-        }
-      });
-    });
-  </script>
 </body>
 </html>
