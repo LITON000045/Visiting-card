@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liton Malakar - Visiting Card</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      width: 350px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .social {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      width: 80%;
+    }
+
+    .btn-instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+      color: white;
+    }
+
+    .btn-instagram:hover {
+      opacity: 0.9;
+    }
+
+    .btn-linkedin {
+      background: #0077b5;
+      color: white;
+    }
+
+    .btn-linkedin:hover {
+      opacity: 0.9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="your-photo.jpg" alt="Liton Malakar">
+    <h2>Liton Malakar</h2>
+    <p>Graphic Designer & Video Editor</p>
+    
+    <div class="contact">
+      <p>📧 litonmalakar.official@gmail.com</p>
+      <p>📱 +91 9674961374</p>
+    </div>
+    
+    <div class="social">
+      <a href="https://www.instagram.com/l_i_t_o_n_m_a_l_a_k_a_r?igsh=OHg5YnkyNW5rMGJz" target="_blank" class="btn btn-instagram">🌸 Follow on Instagram</a>
+      <a href="https://www.linkedin.com/in/liton-malakar-1351a9225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn btn-linkedin">🔗 Connect on LinkedIn</a>
+    </div>
+  </div>
+</body>
+</html>
