@@ -100,6 +100,15 @@
       opacity: 0.9;
     }
 
+    .btn-save {
+      background: #28a745;
+      color: white;
+    }
+
+    .btn-save:hover {
+      opacity: 0.9;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -141,11 +150,49 @@
 <body>
   <div class="card">
     <!-- Replace the src with your direct image link -->
-    <img src="your-photo.jpg" alt="Liton Malakar">
+    <img src="https://drive.google.com/uc?export=view&id=YOUR_FILE_ID" alt="Liton Malakar">
     <h2>Liton Malakar</h2>
     <p>Graphic Designer & Video Editor</p>
     
     <div class="contact">
+      <!-- Click-to-copy email -->
+      <p class="copy-text" data-text="litonmalakar.official@gmail.com">
+        📧 litonmalakar.official@gmail.com
+        <span class="tooltip">Copied!</span>
+      </p>
+
+      <!-- Click-to-copy & call phone number -->
+      <p class="copy-text" data-text="+919674961374">
+        📱 <a href="tel:+919674961374">+91 9674961374</a>
+        <span class="tooltip">Copied!</span>
+      </p>
+    </div>
+    
+    <div class="social">
+      <a href="https://www.instagram.com/l_i_t_o_n_m_a_l_a_k_a_r" target="_blank" class="btn btn-instagram">🌸 Follow on Instagram</a>
+      <a href="https://www.linkedin.com/in/liton-malakar-1351a9225" target="_blank" class="btn btn-linkedin">🔗 Connect on LinkedIn</a>
+      <a href="liton.vcf" download class="btn btn-save">📥 Save My Contact</a>
+    </div>
+  </div>
+
+  <script>
+    const copyElements = document.querySelectorAll('.copy-text');
+
+    copyElements.forEach(el => {
+      el.addEventListener('click', (e) => {
+        if(e.target.tagName !== 'A') {
+          const text = el.getAttribute('data-text');
+          navigator.clipboard.writeText(text).then(() => {
+            const tooltip = el.querySelector('.tooltip');
+            tooltip.classList.add('show');
+            setTimeout(() => tooltip.classList.remove('show'), 1000);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>    <div class="contact">
       <!-- Click-to-copy email -->
       <p class="copy-text" data-text="litonmalakar.official@gmail.com">
         📧 litonmalakar.official@gmail.com
